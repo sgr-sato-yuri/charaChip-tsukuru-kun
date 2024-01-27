@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>sato-yuri portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menu{
+            background-color: #aaa;
+            height: 30px;
+            line-height: 30px;
+            display: flex;
+        }
+        .menu > p{
+            list-style: none;
+            padding: 0 20px;
+        }
+        .menu > p:hover{
+            background-color: #bbb;
+        }
+        .childmenu{
+            background-color: aliceblue;
+            height: 110px;
+        }
+        .child{
+            list-style: none;
+            display: flex;
+        }
+        .child > li{
+            width: 100px;
+            font-size: 12px;
+            text-align: center;
+            padding: 0 10px;
+        }
+        li:hover{
+            background-color: white;
+        }
+        .img{
+            width: 90%;
+            height: 90px;
+            border: 1px solid black
+        }
+        .main{
+            display: flex;
+        }
+        .left{
+            width: 380px;
+            height: 80vh;
+            flex-shrink: 0;
+            background-color: #aaa;
+        }
+        .RCL{
+            margin-left: 53px;
+        }
+        .RCL > button{
+            width: 100px;
+            height: 30px;
+        }
+        .FBLR{
+            margin: 5px;
+        }
+        .FBLR > button{
+            writing-mode: vertical-lr;
+            width: 35px;
+            height: 100px;
+            margin: 5px;
+            display: flex;
+        }
+        .bottom{
+            display: flex;
+        }
+        table{
+            margin-top: 10px;
+        }
+        td{
+            width: 100px;
+            height: 102px;
+            background-color: aqua;
+        }
+        .right{
+            width: 100%;
+            background-color: aqua;
+        }
+        .select{
+            text-align: center;
+        }
+        .select > img{
+            width: 40vw;
+            height: 40vw;
+            margin: 10px;
+        }
+        .data{
+            margin: 0 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <p id="file">ファイル</p>
+            <p id="edit">編集</p>
+        </div>
+        <div class="childmenu">
+            <ul class="child file">
+                <li id="readfile"><div class="img"></div>画像を読み込む</li>
+                <li id="readfolder"><div class="img"></div>フォルダ読込</li>
+                <li id="save"><div class="img"></div>名前を付けて保存</li>
+                <li id="overwrite"><div class="img"></div>上書き保存</li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <div class="left">
+            <div class="comp">
+                <div class="top">
+                    <div class="RCL">
+                        <button>aaa</button>
+                        <button>aaa</button>
+                        <button>aaa</button>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="FBLR">
+                        <button>aaa</button>
+                        <button>aaa</button>
+                        <button>aaa</button>
+                        <button>aaa</button>
+                    </div>
+                    <div class="pic">
+                        <table>
+                        <tr><td><img id="FR"></td><td><img id="FC"></td><td><img id="FL"></td></tr>
+                        <tr><td><img id="RR"></td><td><img id="RC"></td><td><img id="RL"></td></tr>
+                        <tr><td><img id="LR"></td><td><img id="LC"></td><td><img id="LL"></td></tr>
+                        <tr><td><img id="BR"></td><td><img id="BC"></td><td><img id="BL"></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="select">
+                <img id="select">
+            </div>
+            <div class="data">
+                <p>ファイル名</p>
+                <input readonly>
+                <p>形式</p>
+                <input readonly>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="eel.js"></script>
+    <script>
+        const readfile = document.getElementById("readfile");
+        readfile.addEventListener("click",)
+    </script>
+</body>
+</html>
