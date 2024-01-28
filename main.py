@@ -16,6 +16,7 @@ class App(tk.Tk):
 
 count = 0
 selectnum = 0
+tkapp = App()
 
 @eel.expose
 def PYreadfile():
@@ -24,15 +25,11 @@ def PYreadfile():
     type = [("画像ファイル", "*.jpg;*.jpeg;*.png;*.bmp")]
     paths = filedialog.askopenfilenames(filetypes=type)
     if not paths:
-        
+        if App:
+            tkapp.destroy()
         return "break"
-    
-    pathlist = []
-    piclist = []
-
     for imgpath in paths:
         name = os.path.basename(imgpath)
-
     if count == 0:  # 一度目の追加
         selectnum = 0
         pathlist = [imgpath]
@@ -42,11 +39,9 @@ def PYreadfile():
         pathlist.append(imgpath)
         piclist.append(Image.open(imgpath))
         selectnum += 1
-
-    count += 1
+    tkapp.destroy()
     return pathlist
 
 if __name__ == "__main__":
-    app = App()
-    app.mainloop()
     eel.start("main.html")
+    tkapp.mainloop()
