@@ -1,33 +1,41 @@
+import os
 import tkinter as tk
 import tkinter.ttk as ttk
-import os
-import platform
-from PIL import Image
-from tkinter import filedialog, Toplevel
+from PIL import Image, ImageTk
 
 class MyApp(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        self.flag = False
-        self.count = 0
-
         main = tk.Frame(self.master)
         main.pack(expand=True, fill=tk.BOTH)
 
-#tab
+        # タブ
         tab = ttk.Notebook(main)
         tab.pack(expand=1, fill="both")
         file = tk.Frame(tab)
-        tab.add(file, text="file", padding=5)
-        readfileimg = tk.PhotoImage(file="みつあみ.png")
-        readfile = tk.Button(file, text="readfile", image=readfileimg, compound="top")
-        readfile.grid(row=0, column=0)
-        readfolderimg = tk.PhotoImage(file="みつあみ.png")
-        readfolder = tk.Button(file, text="readfolder", image=readfolderimg, compound="top")
-        readfolder.grid(row=0, column=1)
-        edit = tk.Frame(tab)
-        tab.add(edit, text="edit", padding=5)
+        tab.add(file, text="file", padding=3)
+
+        # ボタンの画像を読み込む
+        readfileimg = tk.PhotoImage(file="meu.png")
+        readfileimg.subsample(3)
+        readfile = ttk.Label(file, text="readfile", width=100, image=readfileimg, compound="top")
+        readfile.pack(anchor=tk.NW)
+
+        self.top = tk.Frame(main, height=300)
+        self.top.pack(anchor=tk.N, expand=1, fill=tk.BOTH)
+
+        # ImageTk を使って PhotoImage オブジェクトを作成
+        self.previewframe = tk.LabelFrame(self.top, bg="#111111", width=250, height=250, labelanchor="n")
+        self.previewframe.propagate(False)
+        self.previewframe.place(x=10, y=10)
+
+        # 別の画像を使いたい場合は、適切な画像ファイルを指定する
+        self.catban = tk.PhotoImage(file="meu.png")
+        self.meumeu = tk.Button(self.previewframe, text="meumeu", image=self.catban)
+        self.meumeu.pack()
+
+        # 以下省略
 
 
 if __name__ == "__main__":
@@ -35,4 +43,3 @@ if __name__ == "__main__":
     app.title("charachip-converter")
     app.geometry("800x600")
     app.mainloop()
-

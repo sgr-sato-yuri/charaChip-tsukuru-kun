@@ -61,7 +61,7 @@ save.addEventListener("click",async function(){
     filename.readOnly = "false";
     filename.value = path;
     filename.readOnly = "true";
-    files["fr"].src = path;
+    files["fr"].src = "meu.png";
 });
 
 const overwrite = document.getElementById("overwrite");
