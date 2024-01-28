@@ -19,14 +19,19 @@ selectnum = 0
 tkapp = App()
 
 @eel.expose
+def PYgetcwd():
+    print("getcwd")
+    return os.getcwd()
+
+@eel.expose
 def PYreadfile():
     global count, selectnum
-    
+    tkapp.deiconify()
+    tkapp.lift()
     type = [("画像ファイル", "*.jpg;*.jpeg;*.png;*.bmp")]
     paths = filedialog.askopenfilenames(filetypes=type)
     if not paths:
-        if App:
-            tkapp.destroy()
+        tkapp.withdraw()
         return "break"
     for imgpath in paths:
         name = os.path.basename(imgpath)
@@ -35,11 +40,12 @@ def PYreadfile():
         pathlist = [imgpath]
         piclist = [Image.open(imgpath)]
         selectnum += 1
+        tkapp.withdraw()
     elif count == selectnum:  # 最後に追加
         pathlist.append(imgpath)
         piclist.append(Image.open(imgpath))
         selectnum += 1
-    tkapp.destroy()
+        tkapp.withdraw()
     return pathlist
 
 if __name__ == "__main__":

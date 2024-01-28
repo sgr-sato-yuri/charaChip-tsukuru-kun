@@ -68,23 +68,14 @@
             writing-mode: vertical-lr;
             width: 40px;
         }
-        .FBLR > button{
-            width: 35px;
-            height: 100px;
-            margin: 5px;
-            display: flex;
-        }
         .bottom{
             display: flex;
         }
         table{
-            margin-top: 10px;
+            margin: 10px;
         }
         td{
             border-collapse: separate;
-
-            width: 100px;
-            height: 100px;
         }
         .right{
             width: 100%;
@@ -108,6 +99,12 @@
             margin: 0;
             width: 96px;
             height: 96px;
+        }
+        img[id=FR]{
+            border: 3px dashed #ddd;
+        }
+        input{
+            width: 300px;
         }
     </style>
 </head>
@@ -137,7 +134,7 @@
                 <div class="pic">
                     <table>
                         <tr class="RCL"><td class="head"></td><th><img src="" alt="">aaa</th><th><img src="" alt="">aaa</th><th><img src="" alt="">aaa</th></tr>
-                        <tr><td class="head"><img src="" alt=""></td><td><img id="FR"></td><td><img id="FC"></td><td><img id="FL"></td></tr>
+                        <tr><td class="head"><img src="みつあみ.png" alt=""></td><td><img id="FR"></td><td><img id="FC"></td><td><img id="FL"></td></tr>
                         <tr><td class="head"><img src="" alt=""></td><td><img id="RR"></td><td><img id="RC"></td><td><img id="RL"></td></tr>
                         <tr><td class="head"><img src="" alt=""></td><td><img id="LR"></td><td><img id="LC"></td><td><img id="LL"></td></tr>
                         <tr><td class="head"><img src="" alt=""></td><td><img id="BR"></td><td><img id="BC"></td><td><img id="BL"></td></tr>
@@ -151,7 +148,7 @@
             </div>
             <div class="data">
                 <p>ファイル名</p>
-                <input readonly>
+                <input id="name">
                 <p>形式</p>
                 <input readonly>
             </div>
