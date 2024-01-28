@@ -8,17 +8,28 @@ menubar.forEach(x => {
     menus[x].addEventListener("click", function(){
         menubar.forEach(y => {
             menus[y].style.backgroundColor = "#aaa";
-            menuchildren[y].style.zIndex = "none";
+            menuchildren[y].style.display = "none";
         });
         menus[x].style.backgroundColor = "#bbb";
-        menuchildren[y].style.zIndex = "block";
+        menuchildren[x].style.display = "block";
     });
 });
 
 const readfile = document.getElementById("readfile");
-readfile.addEventListener("click",function(){
-    eel.PYreadfile
-})
+readfile.addEventListener("click",async function(){
+    console.log("wait")
+    let val = await eel.PYreadfile()(function(res){
+        if(res !== "break"){
+            console.log(res)
+        }
+    });
+    console.log(val);
+});
+
+const save = document.getElementById("save");
+save.addEventListener("click",function(){
+    console.log("save");
+});
 
 var selectimg = document.getElementById("select");
 const cells = ["FR","FC","FL","RR","RC","RL","LR","LC","LL","BR","BC","BL"];
