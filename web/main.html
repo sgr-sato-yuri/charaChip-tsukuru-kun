@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>sato-yuri portfolio</title>
+    <title>charachip generator</title>
     <style>
         *{
             margin: 0;
@@ -19,8 +18,13 @@
         .menu > p{
             list-style: none;
             padding: 0 20px;
+            margin: 0 1px;
+            cursor: default;
         }
-        .menu > p:hover{
+        p[id=file]{
+            background-color: #bbb;
+        }
+        .menu > p:active{
             background-color: #bbb;
         }
         .childmenu{
@@ -36,6 +40,9 @@
             font-size: 12px;
             text-align: center;
             padding: 0 10px;
+        }
+        div[id=childedit]{
+            display: none;
         }
         li:hover{
             background-color: white;
@@ -78,9 +85,10 @@
             margin-top: 10px;
         }
         td{
+            border-collapse: separate;
+
             width: 100px;
-            height: 102px;
-            background-color: aqua;
+            height: 100px;
         }
         .right{
             width: 100%;
@@ -92,10 +100,18 @@
         .select > img{
             width: 40vw;
             height: 40vw;
+            max-width: 400px;
+            max-height: 400px;
             margin: 10px;
         }
         .data{
             margin: 0 30px;
+        }
+        td > img{
+            box-sizing: border-box;
+            margin: 0;
+            width: 96px;
+            height: 96px;
         }
     </style>
 </head>
@@ -105,12 +121,17 @@
             <p id="file">ファイル</p>
             <p id="edit">編集</p>
         </div>
-        <div class="childmenu">
+        <div class="childmenu" id="childfile">
             <ul class="child file">
                 <li id="readfile"><div class="img"></div>画像を読み込む</li>
                 <li id="readfolder"><div class="img"></div>フォルダ読込</li>
                 <li id="save"><div class="img"></div>名前を付けて保存</li>
                 <li id="overwrite"><div class="img"></div>上書き保存</li>
+            </ul>
+        </div>
+        <div class="childmenu" id="childedit">
+            <ul class="child edit">
+                <li id="aaa"><div class="img"></div>aaa</li>
             </ul>
         </div>
     </header>
@@ -154,10 +175,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="eel.js"></script>
-    <script>
-        const readfile = document.getElementById("readfile");
-        readfile.addEventListener("click",)
-    </script>
+    <script type="text/javascript" src="../eel.js"></script>
+    <script type="text/javascript" src="js.js"></script>
 </body>
 </html>
