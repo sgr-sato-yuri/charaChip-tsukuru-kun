@@ -1,0 +1,34 @@
+{
+  "name": "chara-chip",
+  "version": "1.0.0",
+  "description": "chara-chip",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "sgr",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "electron-prebuilt": "^1.4.13",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.18.2",
+    "iconv-lite": "^0.6.3",
+    "image-size": "^1.1.1",
+    "image-type": "^5.2.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^28.2.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
