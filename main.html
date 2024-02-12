@@ -17,7 +17,7 @@
             <ul class="child file">
                 <li id="newfile"><div class="img"></div>新規作成</li>
                 <li id="readfile"><img src="img/NAE.png" alt="readfile">画像を読み込む</li>
-                <li id="readpsd"><div class="img"></div>PSDを読み込む</li>
+                <li id="readpsd"><img src="img/未実装.png" alt="readpsd">PSDを読み込む</li>
                 <li id="save"><div class="img"></div>名前を付けて保存</li>
                 <form>
                     <input id="getfile" name="getfile" type="file" multiple accept=".jpg,.jpeg,.png,.bmp">
@@ -25,22 +25,32 @@
                     <input id="getpsd" name="getpsd" type="file" accept=".psd">
                 </form>
                 <form id="sendimg" enctype="multipart/form-data" method="post">
-
+                    <input id="get0" name="get0" type="file">
+                    <input id="get1" name="get1" type="file">
+                    <input id="get2" name="get2" type="file">
+                    <input id="get3" name="get3" type="file">
+                    <input id="get4" name="get4" type="file">
+                    <input id="get5" name="get5" type="file">
+                    <input id="get6" name="get6" type="file">
+                    <input id="get7" name="get7" type="file">
+                    <input id="get8" name="get8" type="file">
+                    <input id="get9" name="get9" type="file">
+                    <input id="get10" name="get10" type="file">
+                    <input id="get11" name="get11" type="file">
                 </form>
 <!--                <li id="overwrite"><div class="img"></div>上書き保存</li>-->
             </ul>
         </div>
         <div class="childmenu" id="childedit">
             <ul class="child edit">
-                <li id="aaa"><div class="img"></div>aaa</li>
+                <li id="aaa"><img src="img/未実装.png" alt="未実装">aaa</li>
             </ul>
         </div>
         <div class="childmenu" id="childconfig">
             <ul class="child config">
                 <li id="bbb">画像の単位サイズ
-                    <form>
+                    <form name="selectsize">
                         <select id="selectsize" >
-                            <option value="16">16</option>
                             <option value="32">32</option>
                         </select>px
                         <input type="number" id="setsize">
@@ -54,11 +64,11 @@
         <div class="left">
             <div class="comp">
                 <div class="pic">
-                    <div class="row RCL"><h3 class="head"></h3><h3><img src="" alt=""></h3><h3><img src="" alt=""></h3><h3><img src="" alt=""></h3></div>
-                    <div class="row 1"><h3 class="head"><img src="img/NAE.png" alt=""></h3><h3><img id="FR"><p id="xfr">x</p><h4 id="ifr">a</h4><h3><img id="FC"><p id="xfc">x</p><h4 id="ifc">a</h4></h3><h3><img id="FL"><p id="xfl">x</p><h4 id="ifl">a</h4></h3></div>
-                    <div class="row 2"><h3 class="head"><img src="" alt=""></h3><h3><img id="RR"><p id="xrr">x</p><h4 id="irr">a</h4></h3><h3><img id="RC"><p id="xrc">x</p><h4 id="irc">a</h4></h3><h3><img id="RL"><p id="xrl">x</p><h4 id="irl">a</h4></h3></div>
-                    <div class="row 3"><h3 class="head"><img src="" alt=""></h3><h3><img id="LR"><p id="xlr">x</p><h4 id="ilr">a</h4></h3><h3><img id="LC"><p id="xlc">x</p><h4 id="ilc">a</h4></h3><h3><img id="LL"><p id="xll">x</p><h4 id="ill">a</h4></h3></div>
-                    <div class="row 4"><h3 class="head"><img src="" alt=""></h3><h3><img id="BR"><p id="xbr">x</p><h4 id="ibr">a</h4></h3><h3><img id="BC"><p id="xbc">x</p><h4 id="ibc">a</h4></h3><h3><img id="BL"><p id="xbl">x</p><h4 id="ibl">a</h4></h3></div>
+                    <div class="row RCL"><h3 class="head"></h3><h3><img src="img/左足.png" alt="左足"></h3><h3><img src="img/央.png" alt="中央"></h3><h3><img src="img/右足.png" alt="右足"></h3></div>
+                    <div class="row 1"><h3 class="head"><img src="img/前.png" alt="前"></h3><h3><img id="FR"><p id="xfr">x</p><h4 id="ifr">a</h4><h3><img id="FC"><p id="xfc">x</p><h4 id="ifc">a</h4></h3><h3><img id="FL"><p id="xfl">x</p><h4 id="ifl">a</h4></h3></div>
+                    <div class="row 2"><h3 class="head"><img src="img/左.png" alt="左"></h3><h3><img id="RR"><p id="xrr">x</p><h4 id="irr">a</h4></h3><h3><img id="RC"><p id="xrc">x</p><h4 id="irc">a</h4></h3><h3><img id="RL"><p id="xrl">x</p><h4 id="irl">a</h4></h3></div>
+                    <div class="row 3"><h3 class="head"><img src="img/右.png" alt="右"></h3><h3><img id="LR"><p id="xlr">x</p><h4 id="ilr">a</h4></h3><h3><img id="LC"><p id="xlc">x</p><h4 id="ilc">a</h4></h3><h3><img id="LL"><p id="xll">x</p><h4 id="ill">a</h4></h3></div>
+                    <div class="row 4"><h3 class="head"><img src="img/後.png" alt="後"></h3><h3><img id="BR"><p id="xbr">x</p><h4 id="ibr">a</h4></h3><h3><img id="BC"><p id="xbc">x</p><h4 id="ibc">a</h4></h3><h3><img id="BL"><p id="xbl">x</p><h4 id="ibl">a</h4></h3></div>
                 </div>
             </div>
         </div>
