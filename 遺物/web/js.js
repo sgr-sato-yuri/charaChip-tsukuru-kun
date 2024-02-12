@@ -41,8 +41,8 @@ var count = 0;
 const filename = document.getElementById("name");
 const readfile = document.getElementById("readfile");
 readfile.addEventListener("click",async function(){
-//    cwd = await getcwd();
-//    let pathlist = await eel.PYreadfile()();
+    cwd = await getcwd();
+    let pathlist = await eel.PYreadfile()();
     pathlist.forEach((imgpath) => {
         var path = new URL(imgpath, `file://${cwd}`).href;
         filename.readOnly = "false";
